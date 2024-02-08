@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
-import VideoCart from "./VideoCart";
-import ChannelCart from "./ChannelCart";
+import {VideoCart, ChannelCart } from "./";
+
 
 const Videos = ({ video }) => {
   console.log(video);
@@ -15,7 +15,7 @@ const Videos = ({ video }) => {
       >
         {video.map((item, idx) => (
           <Box key={idx}>
-            {item.id.videoId && <VideoCart video={item}/>}
+            {item.id.videoId && <VideoCart videos={item}/>}
             {item.id.channelId && <ChannelCart channelDetail={item}/>}
           </Box>
         ))}
